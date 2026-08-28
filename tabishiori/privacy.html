@@ -184,7 +184,7 @@
 <p>アプリの「同期をやめる」を操作すると、<strong>預かり先に保管されたそのしおりの内容は
 削除されます</strong>。端末の中のしおりは残ります(同期が止まるだけです)。</p>
 <p>同期をオフのままお使いになる場合、しおりの内容が端末の外に出ることはありません。</p>
-<h2>インターネットへの通信について(地図)</h2>
+<h2>インターネットへの通信について(地図・検索・天気)</h2>
 <p>本アプリは、上記の同期のほか、以下の目的でインターネットに接続します。
 いずれの通信でも、しおりの内容や利用者を識別する情報は送信しません。</p>
 <div class="table-wrap"><table>
@@ -211,13 +211,29 @@
 <td>周辺の施設の検索</td>
 <td>検索の中心となる座標と範囲</td>
 </tr>
+<tr>
+<td>ウィキペディア(ja.wikipedia.org)</td>
+<td>周辺のおすすめの表示</td>
+<td>検索の中心となる座標と範囲</td>
+</tr>
+<tr>
+<td>Open-Meteo(api.open-meteo.com)</td>
+<td>予定の場所・時刻の天気予報</td>
+<td>予定に登録した場所の座標と日付</td>
+</tr>
 </tbody>
 </table></div>
-<p>これらは OpenStreetMap Foundation および関係団体が運営するサービスです。
+<p>上の3つは OpenStreetMap Foundation および関係団体が運営するサービスです。
 各サービスのプライバシーに関する扱いは、それぞれの規約をご確認ください。</p>
 <ul>
 <li>OpenStreetMap のプライバシーポリシー: https://osmfoundation.org/wiki/Privacy_Policy</li>
+<li>ウィキメディア財団のプライバシーポリシー: https://foundation.wikimedia.org/wiki/Policy:Privacy_policy</li>
+<li>Open-Meteo のプライバシーポリシー: https://open-meteo.com/en/terms</li>
 </ul>
+<p><strong>天気の表示は設定でオフにできます</strong>(設定 → 天気)。
+オフにすると、天気に関する通信は行われません。
+送信されるのは<strong>予定に登録した場所の座標と日付だけ</strong>で、
+現在地や予定の名前は送信しません。</p>
 <h2>端末の機能の利用について</h2>
 <p>本アプリは、以下の機能を利用者の許可を得てから使用します。
 許可しなくても、その機能以外はすべてお使いいただけます。</p>
@@ -274,8 +290,20 @@
 <h2>お問い合わせ</h2>
 <p>本アプリおよび本ポリシーに関するお問い合わせは、以下までご連絡ください。</p>
 <ul>
-<li><a href="mailto:sunlight.michishirube@gmail.com">sunlight.michishirube@gmail.com</a></li>
+<li>(連絡先メールアドレス — ストア提出前に確定させること)</li>
 </ul>
+<hr />
+<blockquote>
+<p><strong>開発メモ(公開版には載せない)</strong></p>
+<ul>
+<li>連絡先は個人用アドレスを載せないこと。ツミアゲは <code>sunlight.michishirube@gmail.com</code> を使っている。
+  タビシオリ用に別アドレスを用意するか、同じものを使うかは要決定</li>
+<li>App Store の「App のプライバシー」は <strong>データを収集しません</strong> で申告できる。
+  位置情報も端末内で使うだけで、収集も送信もしていない</li>
+<li>v1.1 でグループ共有・位置共有を入れるときは、<strong>このポリシーを全面的に書き直す必要がある</strong>
+  (「収集しません」が成り立たなくなる)</li>
+</ul>
+</blockquote>
 <footer>
   タビシオリ — 旅行のしおりアプリ<br>
   地図データ: © OpenStreetMap contributors
