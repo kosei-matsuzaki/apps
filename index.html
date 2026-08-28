@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>アプリ | kosei-matsuzaki</title>
+<meta name="description" content="個人開発しているスマホアプリの公開ページ。プライバシーポリシーとお問い合わせ。">
+<style>
+  :root {
+    --bg: #f5f7fc; --surface: #fff; --ink: #232734;
+    --muted: #6b7280; --line: #e6e8ef; --accent: #3b6fd4;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151a2e; --surface: #1f2740; --ink: #eef1f8;
+      --muted: #9aa3bd; --line: #2c3450; --accent: #5b8def;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 56px 20px 72px;
+    background: var(--bg); color: var(--ink);
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP",
+                 "Yu Gothic UI", Meiryo, system-ui, sans-serif;
+    line-height: 1.9; font-size: 15px;
+  }
+  .wrap { max-width: 620px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 6px; letter-spacing: .02em; }
+  .lead { color: var(--muted); font-size: 13.5px; margin: 0 0 36px; }
+  .app {
+    display: block; text-decoration: none; color: inherit;
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 16px; padding: 20px 22px; margin-bottom: 14px;
+  }
+  .app:hover { border-color: var(--accent); }
+  .app h2 { font-size: 17px; margin: 0 0 4px; }
+  .app p { margin: 0 0 12px; color: var(--muted); font-size: 13.5px; }
+  .links a {
+    display: inline-block; margin-right: 14px;
+    color: var(--accent); font-size: 13.5px; text-decoration: none;
+  }
+  .links a:hover { text-decoration: underline; }
+  footer {
+    margin-top: 48px; padding-top: 20px;
+    border-top: 1px solid var(--line);
+    color: var(--muted); font-size: 12.5px;
+  }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>アプリ</h1>
+  <p class="lead">個人で作っているスマホアプリの公開ページです。</p>
+
+  <div class="app">
+    <h2>ツミアゲ</h2>
+    <p>目標から逆算して、毎日のノルマを自動で組み立てる勉強管理アプリ。</p>
+    <div class="links">
+      <a href="tsumiage/privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+
+  <div class="app">
+    <h2>タビシオリ</h2>
+    <p>旅行の予定・宿の予約確認書・チケット・費用を、1つのしおりにまとめるアプリ。</p>
+    <div class="links">
+      <a href="tabishiori/privacy.html">プライバシーポリシー</a>
+    </div>
+  </div>
+
+  <footer>
+    お問い合わせ:
+    <a href="mailto:sunl19ht.matsuzaki@gmail.com">sunl19ht.matsuzaki@gmail.com</a><br>
+    地図データ: © OpenStreetMap contributors
+  </footer>
+</div>
+</body>
+</html>

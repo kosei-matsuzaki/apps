@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー | タビシオリ</title>
+<style>
+  :root {
+    --bg: #151a2e;
+    --surface: #1f2740;
+    --ink: #eef1f8;
+    --muted: #9aa3bd;
+    --line: #2c3450;
+    --accent: #5b8def;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 32px 20px 80px;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans",
+                 "Noto Sans JP", sans-serif;
+    line-height: 1.9;
+    font-size: 15px;
+  }
+  main { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 26px; margin: 0 0 8px; letter-spacing: .02em; }
+  h2 {
+    font-size: 19px;
+    margin: 44px 0 12px;
+    padding-left: 12px;
+    border-left: 4px solid var(--accent);
+    line-height: 1.5;
+  }
+  h3 { font-size: 16px; margin: 28px 0 8px; color: var(--accent); }
+  p, li { color: var(--ink); }
+  a { color: var(--accent); }
+  hr { border: 0; border-top: 1px solid rgba(255,255,255,.10); margin: 36px 0; }
+  ul { padding-left: 1.3em; }
+  li { margin: 6px 0; }
+  blockquote {
+    margin: 20px 0;
+    padding: 12px 16px;
+    background: rgba(91,141,239,.10);
+    border-radius: 12px;
+    color: var(--muted);
+  }
+  blockquote p { margin: 0; color: inherit; }
+  code {
+    background: rgba(255,255,255,.07);
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: .92em;
+  }
+  .table-wrap { overflow-x: auto; margin: 18px 0; }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td {
+    border: 1px solid rgba(255,255,255,.12);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th { background: var(--surface); font-weight: 700; }
+  strong { color: #fff; }
+  footer {
+    margin-top: 56px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,.10);
+    color: var(--muted);
+    font-size: 13px;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f5f7fc; --surface: #fff; --ink: #232734;
+      --muted: #6b7280; --accent: #3b6fd4;
+    }
+    th, td { border-color: rgba(0,0,0,.12); }
+    strong { color: #000; }
+    code { background: rgba(0,0,0,.06); }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>プライバシーポリシー(タビシオリ)</h1>
+<p>最終更新: 2026-08-28</p>
+<hr />
+<h2>はじめに</h2>
+<p>タビシオリ(以下「本アプリ」)は、旅行のしおりを作るためのアプリです。</p>
+<p>本アプリは、<strong>利用者を識別する情報を収集しません</strong>。
+アカウント登録・ログイン・ユーザーIDの仕組みがありません。</p>
+<p>入力した内容は、原則として<strong>お使いの端末の中だけ</strong>に保存されます。
+ただし、利用者ご自身が「同行者と同期」を使ったときにかぎり、
+そのしおりの内容が預かり先のサーバーに保管されます(詳しくは後述)。</p>
+<h2>収集しない情報</h2>
+<p>以下のいずれも、開発者や第三者に送信されることはありません。</p>
+<ul>
+<li>位置情報</li>
+<li>端末の識別子、広告ID</li>
+<li>利用状況の統計(どの画面を開いたか、いつ使ったか など)</li>
+<li><strong>添付した書類・写真</strong>(同期を使っている場合でも送信しません)</li>
+<li>氏名・メールアドレス・電話番号などの連絡先</li>
+</ul>
+<h2>端末内に保存される情報</h2>
+<p>本アプリで入力した内容は、すべて<strong>お使いの端末の中だけ</strong>に保存されます。</p>
+<ul>
+<li>しおり・予定・場所・費用・書類の情報は、アプリ専用のデータベースに保存されます</li>
+<li><strong>添付した書類・写真は、暗号化して保存されます</strong>(AES-256-GCM)。
+  暗号化の鍵は、端末の安全な保管領域(Android の Keystore / iOS の Keychain)に置かれ、
+  アプリのファイル領域には保存されません</li>
+<li>アプリを削除すると、これらの情報も端末から削除されます</li>
+</ul>
+<blockquote>
+<p>⚠️ アプリを削除しても、<strong>同期をオンにしたまま</strong>だった場合は、
+預かり先に保管された内容は残ります。
+消したいときは、アプリを削除する前に「同期をやめる」を操作してください。</p>
+</blockquote>
+<h2>同行者との同期について(利用者が選んだときだけ)</h2>
+<p>本アプリには、同行者と1つのしおりを共有する機能があります。
+<strong>既定ではオフ</strong>で、利用者がしおりごとに「同期を始める」を選んだときにだけ動きます。</p>
+<p>同期をオンにすると、そのしおりの内容が<strong>預かり先のサーバー</strong>
+(Supabase Inc. が提供するデータベース。サーバーの所在は日本)に保管されます。</p>
+<h3>預けるもの / 預けないもの</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>預けるもの</th>
+<th>預けないもの</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>しおりの名前・行き先・期間・予算・メモ</td>
+<td><strong>書類とその添付ファイル</strong>(予約確認書・チケット・身分証の画像やPDF、予約番号)</td>
+</tr>
+<tr>
+<td>予定の題名・日時・メモ</td>
+<td>位置情報の記録</td>
+</tr>
+<tr>
+<td>場所の名前・住所・緯度経度</td>
+<td>端末の識別子・広告ID</td>
+</tr>
+<tr>
+<td>同行者としてご自身が入力した名前</td>
+<td>利用状況の統計</td>
+</tr>
+<tr>
+<td>費用の記録(項目名・金額・支払者・負担者)</td>
+<td>アプリの見た目の設定</td>
+</tr>
+<tr>
+<td>準備(やること・持ち物)の内容</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>書類とその添付は、同期の対象外です。</strong>これらは端末の中で暗号化されたまま、
+外に出ることはありません。</p>
+<h3>だれが見られるのか</h3>
+<p>同期を始めると、そのしおりに<strong>合言葉</strong>(ランダムな26文字)が作られます。
+預かり先のデータは、<strong>この合言葉を知っている人だけ</strong>が読み書きできます。
+合言葉は利用者ご自身が同行者にお渡しするものです。</p>
+<ul>
+<li>預かり先のデータベースは、外部から直接読み出せない設定にしています</li>
+<li>出し入れは合言葉を照合する窓口を通してのみ行われます</li>
+<li>開発者は、預かり先の管理者として技術的にはデータを閲覧できる立場にありますが、
+  <strong>内容を閲覧・利用・第三者提供することはありません</strong></li>
+<li>預かり先の運営事業者(Supabase Inc.)は、その立場において
+  データを保管しています</li>
+</ul>
+<p><strong>預けるデータは暗号化されていません。</strong>合言葉を知らない第三者は読めませんが、
+合言葉を渡す相手はご自身でお選びください。</p>
+<h3>いつ通信するのか</h3>
+<p>同期をオンにしたしおりについて、次のときに通信します。</p>
+<ul>
+<li>そのしおりを開いたとき</li>
+<li>しおりの内容を変更したあと</li>
+<li>アプリを再び前面に出したとき</li>
+<li>「いま同期する」を操作したとき</li>
+</ul>
+<h3>消し方</h3>
+<p>アプリの「同期をやめる」を操作すると、<strong>預かり先に保管されたそのしおりの内容は
+削除されます</strong>。端末の中のしおりは残ります(同期が止まるだけです)。</p>
+<p>同期をオフのままお使いになる場合、しおりの内容が端末の外に出ることはありません。</p>
+<h2>インターネットへの通信について(地図)</h2>
+<p>本アプリは、上記の同期のほか、以下の目的でインターネットに接続します。
+いずれの通信でも、しおりの内容や利用者を識別する情報は送信しません。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>接続先</th>
+<th>目的</th>
+<th>送信される内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenStreetMap(tile.openstreetmap.org)</td>
+<td>地図の表示</td>
+<td>表示する地図の範囲(座標)</td>
+</tr>
+<tr>
+<td>Nominatim(nominatim.openstreetmap.org)</td>
+<td>場所の名前・住所の検索</td>
+<td>入力した検索語、検索の中心となる座標</td>
+</tr>
+<tr>
+<td>Overpass API(overpass-api.de)</td>
+<td>周辺の施設の検索</td>
+<td>検索の中心となる座標と範囲</td>
+</tr>
+</tbody>
+</table></div>
+<p>これらは OpenStreetMap Foundation および関係団体が運営するサービスです。
+各サービスのプライバシーに関する扱いは、それぞれの規約をご確認ください。</p>
+<ul>
+<li>OpenStreetMap のプライバシーポリシー: https://osmfoundation.org/wiki/Privacy_Policy</li>
+</ul>
+<h2>端末の機能の利用について</h2>
+<p>本アプリは、以下の機能を利用者の許可を得てから使用します。
+許可しなくても、その機能以外はすべてお使いいただけます。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>機能</th>
+<th>使う場面</th>
+<th>補足</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>位置情報</td>
+<td>地図に現在地を表示するとき、次の目的地までの距離を出すとき</td>
+<td><strong>画面で「現在地」を操作したときだけ</strong>取得します。常時取得やバックグラウンドでの取得は行いません。取得した位置は端末の外に出ません</td>
+</tr>
+<tr>
+<td>カメラ</td>
+<td>書類をその場で撮影して添付するとき</td>
+<td>撮影した画像は暗号化して端末内に保存されます</td>
+</tr>
+<tr>
+<td>写真</td>
+<td>書類の写真を添付するとき</td>
+<td>選んだ画像だけを読み込みます</td>
+</tr>
+<tr>
+<td>生体認証</td>
+<td>アプリロックをオンにしているとき</td>
+<td>指紋・顔・パスコードの照合は端末の機能が行い、本アプリは結果(成功・失敗)だけを受け取ります</td>
+</tr>
+</tbody>
+</table></div>
+<h2>情報を外部に出す操作について</h2>
+<p>以下の操作は、利用者ご自身が明示的に行ったときにのみ実行されます。</p>
+<ul>
+<li><strong>PDF の書き出しと共有</strong> … しおりの内容を PDF にして、端末の共有機能で送ります。
+  送り先は利用者が選びます。予約番号は既定では伏字になります</li>
+<li><strong>書類ファイルの共有</strong> … 添付したファイルを復号して、端末の共有機能で送ります</li>
+<li><strong>地図アプリへの引き渡し</strong> … 目的地の座標を、端末に入っている地図アプリに渡します</li>
+<li><strong>しおりを渡す</strong> … しおりの内容を1つのファイルにして、端末の共有機能で送ります。
+  <strong>書類とその添付は含まれません</strong></li>
+<li><strong>同行者と同期</strong> … 前述のとおり、しおりの内容を預かり先に保管します</li>
+</ul>
+<h2>広告・解析</h2>
+<p>本アプリは、広告を表示せず、解析ツールも使用していません。</p>
+<h2>子どものプライバシー</h2>
+<p>本アプリは、13歳未満の子どもから意図的に情報を収集することはありません
+(そもそも情報を収集していません)。</p>
+<h2>ポリシーの変更</h2>
+<p>本ポリシーを変更する場合は、このページを更新し、最終更新日を書き換えます。
+収集する情報の扱いに関わる変更を行う場合は、アプリの更新情報でもお知らせします。</p>
+<h2>お問い合わせ</h2>
+<p>本アプリおよび本ポリシーに関するお問い合わせは、以下までご連絡ください。</p>
+<ul>
+<li>(連絡先メールアドレス — ストア提出前に確定させること)</li>
+</ul>
+<hr />
+<blockquote>
+<p><strong>開発メモ(公開版には載せない)</strong></p>
+<ul>
+<li>連絡先は個人用アドレスを載せないこと。ツミアゲは <code>sunlight.michishirube@gmail.com</code> を使っている。
+  タビシオリ用に別アドレスを用意するか、同じものを使うかは要決定</li>
+<li>App Store の「App のプライバシー」は <strong>データを収集しません</strong> で申告できる。
+  位置情報も端末内で使うだけで、収集も送信もしていない</li>
+<li>v1.1 でグループ共有・位置共有を入れるときは、<strong>このポリシーを全面的に書き直す必要がある</strong>
+  (「収集しません」が成り立たなくなる)</li>
+</ul>
+</blockquote>
+<footer>
+  タビシオリ — 旅行のしおりアプリ<br>
+  地図データ: © OpenStreetMap contributors
+</footer>
+</main>
+</body>
+</html>
